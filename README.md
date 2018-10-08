@@ -61,7 +61,7 @@ app.get('/greeting/:name', (req, res) => {
 
 # Intro to the Internet
 
-1. Read these [notes](https://github.com/ga-students/wdi-remote-gizmo/blob/master/unit_2/w05d01/instructor_notes/INTRO_TO_INTERNET.md)
+1. Read these [notes](https://git.generalassemb.ly/WebDev-Connected-Classroom/how-the-internet-works-notes/blob/master/README.md)
 
 1. Watch this [video](https://www.youtube.com/watch?v=7_LPdttKXPc) about the internet AND this [video](https://www.youtube.com/watch?v=xIuBmOufbls) about packets travel on the internet.
 

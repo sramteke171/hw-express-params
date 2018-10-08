@@ -4,24 +4,11 @@
 * Practice using parameters from a request.
 
 # Setup
-1. Create a directory `express_intro_lab`  with a `express_lab.js` file inside. Write your answers inside this one js file.
+1. Initialize your node modules by running `npm init`. Create a server file named `server.js`. Be sure you set the `entry point` property in `package.json` to the name of your server file.
 
-2. Put the title of the section above your code for easy reference.
-Ex:
-```
-//Greetings App
-app.get('/greeting/:name', (req, res) => {
-  res.send({params: req.params, queries: req.query})
-});
-```
-
-3. Inside your lab folder, install express `npm install --save express`. Check your files. Hint: You can check to make sure your installation was successful in one of the following places:
+2. Install express `npm install --save express`. Check your files. Hint: You can check to make sure your installation was successful in one of the following places:
 - Your `package.json` file should have `express` listed in the dependencies.
 - You could also check in your `node_modules` folder to see an`express` folder.
-
-4. You can do this once in your application to run all of the answers below:
-- Inside your Javascript file, require `express` (look back to the markdown from today if you need more help on how to do this) and invoke the function.
-- Tell the server where to listen for requests (the port).
 
 :elephant: Need a reminder about getting and sending info?
 
@@ -31,17 +18,12 @@ app.get('/greeting/:name', (req, res) => {
 });
 ```
 
-# Answer These Questions
-
+# Meet These Specifications
 
 ## Greetings
-1. Add this title in your application as a comment and write the code to answer the question below the title.
+1. Your app should have a route of `'/greeting/'` and it should send a generic greeting to the screen like "Hello, stranger".
 
-2. Your app should have a route of `'/greeting/'` and it should send a generic greeting to the screen like "Hello, stranger".
-
-3. Your app should have a route of `'/greeting/:name'` and it should expect *1 param* which takes in a person's name.
-
-4. When hitting the route, the page should display a message such as "Hello, <name>", or "What's up, `<name>`", or "`<name>`! It's so great to see you!" (ex. hitting `'/greeting/Jimmy-boy'` should display `Wow! Hello there, Jimmy-boy` on the page).
+2. Your app should have a route of `'/greeting/:name'` and it should expect *1 param* which takes in a person's name. When hitting the route, the page should display a message such as "Hello, <name>", or "What's up, `<name>`", or "`<name>`! It's so great to see you!" (ex. hitting `'/greeting/Jimmy-boy'` should display `Wow! Hello there, Jimmy-boy` on the page).
 
 &#x1F534; **Commit 1** <br>
 <hr>
@@ -49,9 +31,7 @@ app.get('/greeting/:name', (req, res) => {
 <hr>
 
 ## Tip Calculator
-1. Add this title in your application as a comment and write the code to answer the question below the title.
-
-2. Your app should have a route of `'/tip'` and it should expect *2 params*. One should be `total` and one should be `tipPercentage`.
+1. Your app should have a route of `'/tip'` and it should expect *2 params*. One should be `total` and one should be `tipPercentage`.
 
 3. When hitting the route, the page should *display how much your tip will be* based on the total amount of the bill and the tip percentage. (ex. hitting `'/tip/100/20'` should display `20` on the page).
 
@@ -62,15 +42,12 @@ app.get('/greeting/:name', (req, res) => {
 
 
 ## Magic 8 Ball
-1. Add this title in your application as a comment and write the code to answer the question below the title.
+1. Create a route of `'/magic'` that should expect a phrase in the URL that ask the Magic 8 ball a question.
 
-2. Create a route of `'/magic'` that should expect a phrase in the URL that ask the Magic 8 ball a question.
-
-3.  So if the user hits that route and asks a question of "Will I be a Millionaire" (ex. `'/magic/Will%20I%20Be%20A%20Millionaire'`) he should have return to him his question AND a random Magic 8 ball response (see the array below) on the  screen.
+3.  So if the user hits that route and asks a question of "Will I be a Millionaire" (ex. `'/magic/Will%20I%20Be%20A%20Millionaire'`) they should see returned to them their question AND a random Magic 8 ball response (see the array below) on the screen.
 
 4. Remember that we can't use spaces in the url, so we use `%20` to express a space in the url.
 
-5. So if the user hits that route and asks a question of "Will I be a Millionaire" he should get his question asked and a random Magic 8 ball quote on the  screen.
 - Use this array of Magic 8 ball responses.....
 
 ```
@@ -88,18 +65,16 @@ app.get('/greeting/:name', (req, res) => {
 
 1. Watch this [video](https://www.youtube.com/watch?v=7_LPdttKXPc) about the internet AND this [video](https://www.youtube.com/watch?v=xIuBmOufbls) about packets travel on the internet.
 
-# Hungry for more?
+# Optional: Hungry for more?
 
 ## Fibonacci
-1.  Add this title in your application as a comment and write the code to answer the question below the title.
+1. Create a route 'fibonacci'
 
-2. Create a route 'fibonacci'
+2. This route will take one param, the number we will operate on.
 
-3. This route will take one param, the number we will operate on.
+3. If the number param is not a [fibonacci number](https://en.wikipedia.org/wiki/Fibonacci_number), print out "I can tell this ain't a fibonacci number. Wack."
 
-4. If the number param is not a [fibonacci number](https://en.wikipedia.org/wiki/Fibonacci_number), print out "Brah, I can tell this ain't a fibonacci number. Wack."
-
-5. If the number is a Fibonacci number print out "Sweet number, dude."
+4. If the number is a Fibonacci number print out "Sweet Fibonacci number!."
 
 &#x1F534; **Commit 4** <br>
 <hr>
@@ -107,7 +82,7 @@ app.get('/greeting/:name', (req, res) => {
 <hr>
 
 ## Fibonacci Continued
-1. Take in a number that will refer to the index of a Fibonacci number. Print out the Fibonacci number that is located at that index.
+1. Instead, take in a number that will refer to the index of a Fibonacci number. Print out the Fibonacci number that is located at that index.
 
 ```
 Example:
@@ -123,4 +98,3 @@ Output => 5
 <hr>
 "Commit 5: Hungry for more: Fibonacci application extended."
 <hr>
-

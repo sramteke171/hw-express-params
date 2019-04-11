@@ -33,7 +33,9 @@ app.get('/greeting/:name', (req, res) => {
 ## Tip Calculator
 1. Your app should have a route of `'/tip'` and it should expect *2 params*. One should be `total` and one should be `tipPercentage`.
 
-3. When hitting the route, the page should *display how much your tip will be* based on the total amount of the bill and the tip percentage. (ex. hitting `'/tip/100/20'` should display `20` on the page).
+2. When hitting the route, the page should *display how much your tip will be* based on the total amount of the bill and the tip percentage. (ex. hitting `'/tip/100/20'` should display `20` on the page).
+
+3. Be sure you are `res.send()`ing a **String**.  If you try to directly `res.send()` a Number, you will get errors about HTTP status codes.
 
 &#x1F534; **Commit 2** <br>
 <hr>

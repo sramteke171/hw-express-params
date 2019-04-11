@@ -21,13 +21,16 @@ app.get('/greeting/:name', (req, res) => {
 # Meet These Specifications
 
 ## Greetings
-1. Your app should have a route of `'/greeting/'` and it should send a generic greeting to the screen like "Hello, stranger".
+1. Your app should have a route of `'/greeting'` and it should send a generic greeting to the screen like "Hello, stranger".
 
 2. Your app should have a route of `'/greeting/:name'` and it should expect *1 param* which takes in a person's name. When hitting the route, the page should display a message such as "Hello, <name>", or "What's up, `<name>`", or "`<name>`! It's so great to see you!" (ex. hitting `'/greeting/Jimmy-boy'` should display `Wow! Hello there, Jimmy-boy` on the page).
 
 &#x1F534; **Commit 1** <br>
 <hr>
 "Commit 1: Greeting express application created."
+
+>The purpose of this question is to demonstrate that similar to functions, routes in Express can take parameters and those parameters can have any value.
+
 <hr>
 
 ## Tip Calculator
@@ -40,6 +43,9 @@ app.get('/greeting/:name', (req, res) => {
 &#x1F534; **Commit 2** <br>
 <hr>
 "Commit 2: Tip Calculator express application created."
+
+>The purpose of this question is to demonstrate that info from the URL parameters can be used in your application to change things
+
 <hr>
 
 
@@ -58,7 +64,11 @@ app.get('/greeting/:name', (req, res) => {
 
 &#x1F534; **Commit 3** <br>
 <hr>
+
 "Commit 3: Magic 8 Ball express application created."
+
+>The purpose of this question is to demonstrate that a route may use data from _both_ the URL parameters AND other places within the app to do its work or construct its responses.
+
 <hr>
 
 # Intro to the Internet

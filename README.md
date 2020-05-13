@@ -4,7 +4,9 @@
 * Practice using parameters from a request.
 
 # Setup
-1. Initialize your node modules by running `npm init`. Create a server file named `server.js`. Be sure you set the `entry point` property in `package.json` to the name of your server file.
+1. Create a new directory `mkdir params-lab`. `cd params-lab`
+
+1. Create a server file named `server.js`. Initialize your node modules by running `npm init`. Be sure you set the `entry point` property in `package.json` to `server.js`.
 
 2. Install express `npm install --save express`. Check your files. Hint: You can check to make sure your installation was successful in one of the following places:
 - Your `package.json` file should have `express` listed in the dependencies.
@@ -70,12 +72,6 @@ app.get('/greeting/:name', (req, res) => {
 >The purpose of this question is to demonstrate that a route may use data from _both_ the URL parameters AND other places within the app to do its work or construct its responses.
 
 <hr>
-
-# Intro to the Internet
-
-1. Read these [notes](https://git.generalassemb.ly/WebDev-Connected-Classroom/how-the-internet-works-notes/blob/master/README.md)
-
-1. Watch this [video](https://www.youtube.com/watch?v=7_LPdttKXPc) about the internet AND this [video](https://www.youtube.com/watch?v=xIuBmOufbls) about packets travel on the internet.
 
 # Optional: Hungry for more?
 

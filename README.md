@@ -14,7 +14,7 @@
 
 :elephant: Need a reminder about getting and sending info?
 
-```
+```js
 app.get('/greeting/:name', (req, res) => {
   res.send({params: req.params, queries: req.query})
 });
@@ -60,7 +60,7 @@ app.get('/greeting/:name', (req, res) => {
 
 - Use this array of Magic 8 ball responses.....
 
-```
+```js
 ["It is certain", "It is decidedly so", "Without a doubt", "Yes definitely","You may rely on it", "As I see it yes", "Most likely", "Outlook good","Yes", "Signs point to yes", "Reply hazy try again", "Ask again later","Better not tell you now", "Cannot predict now", "Concentrate and ask again","Don't count on it", "My reply is no", "My sources say no","Outlook not so good", "Very doubtful"]
 ```
 
@@ -92,7 +92,7 @@ app.get('/greeting/:name', (req, res) => {
 ## Fibonacci Continued
 1. Instead, take in a number that will refer to the index of a Fibonacci number. Print out the Fibonacci number that is located at that index.
 
-```
+```js
 Example:
 The Fibonacci sequence:
 1,1,2,3,5,8,13,21,34,55,89,144, ...;

@@ -65,9 +65,36 @@ app.get("/magic/:question", (req, res) => {
     let item = arrayBall[Math.floor(Math.random() * arrayBall.length)];
     res.send(`${req.params.question} ${item}`);
 
-    //res.send(item);
-
 })
+
+// Optional: Hungry for more?
+// Fibonacci
+// Create a route 'fibonacci'
+// This route will take one param, the number we will operate on.
+// If the number param is not a fibonacci number, print out "I can tell this ain't a fibonacci number. Wack."
+// If the number is a Fibonacci number print out "Sweet Fibonacci number!."
+// 🔴 Commit 4
+
+let fibNumber = [0, 1, 1, 2, 3, 5, 8, 13, 21];
+app.get("/fibonacci/:number", (req, res) => {
+
+    let x = fibNumber.forEach((num) => {
+        if (parseInt(req.params.number) === num) {
+            console.log("Sweet Fibonacci number");
+            res.send("Sweet Fibonacci number!.");
+        }
+        // else {
+        //     res.send("I can tell this ain't a fibonacci number. Wack.");
+        // }
+    });
+    let y = fibNumber.forEach((num) => {
+        if (parseInt(req.params.number) != num) {
+            console.log("I can tell this ain't a fibonacci number. Wack.");
+            res.send("I can tell this ain't a fibonacci number. Wack.");
+        }
+    });
+
+});
 
 app.listen(3000, () => {
     console.log("nodemon / server listening");

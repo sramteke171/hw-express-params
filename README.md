@@ -1,23 +1,40 @@
+[![General Assembly Logo](https://camo.githubusercontent.com/1a91b05b8f4d44b5bbfb83abac2b0996d8e26c92/687474703a2f2f692e696d6775722e636f6d2f6b6538555354712e706e67)](https://generalassemb.ly/education/web-development-immersive)
+
 ## Learning Objectives
 * Practice setting up express applications.
 * Practice creating custom routes.
 * Practice using parameters from a request.
 
 # Setup
-1. Create a new directory `mkdir params-lab`. `cd params-lab`
+* Fork and clone this repo.
+* Go inside the folder you just cloned.
+* Create a file named `server.js`. 
+* Run the command **`npm init -y`** this command will create the file `package.json`.
+* Install express by running the command **`npm install express`**. (When you run this command for the first time. the folder `node_modules` gets created).
+* Open VScode.
+  * Your `package.json` file should have `express` listed in the dependencies.
+  * You could also check in your `node_modules` folder to see an `express` folder.
+* In your `server.js` file set up your express app.
 
-1. Create a server file named `server.js`. Initialize your node modules by running `npm init`. Be sure you set the `entry point` property in `package.json` to `server.js`.
-
-2. Install express `npm install --save express`. Check your files. Hint: You can check to make sure your installation was successful in one of the following places:
-- Your `package.json` file should have `express` listed in the dependencies.
-- You could also check in your `node_modules` folder to see an`express` folder.
-
-:elephant: Need a reminder about getting and sending info?
+:elephant: Need a reminder in how to set up your express app?
 
 ```js
-app.get('/greeting/:name', (req, res) => {
-  res.send({params: req.params, queries: req.query})
+const express = require("express");
+const app = express();
+
+app.listen(3000, () => {
+    console.log("Server is listening!!!")
 });
+```
+* To validate if you express app (your server) is good to go, run the command `nodemon` in your terminal
+you should see something like this
+```sh
+ > $: nodemon
+[nodemon] 1.18.11
+[nodemon] to restart at any time, enter `rs`
+[nodemon] watching: *.*
+[nodemon] starting `node server.js`
+Server is listening!!!
 ```
 
 # Meet These Specifications
@@ -32,6 +49,8 @@ app.get('/greeting/:name', (req, res) => {
 "Commit 1: Greeting express application created."
 
 >The purpose of this question is to demonstrate that similar to functions, routes in Express can take parameters and those parameters can have any value.
+
+
 
 <hr>
 

@@ -17,6 +17,7 @@ app.get("/greeting", (req, res) => {
     res.send("Hello, stranger");
 });
 
+
 app.get("/greeting/:name", (req, res) => {
     console.log(req.params.name);
     res.send(`Hello, What's up ${req.params.name}! It's so great to see you!`)

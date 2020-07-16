@@ -75,25 +75,44 @@ app.get("/magic/:question", (req, res) => {
 // If the number is a Fibonacci number print out "Sweet Fibonacci number!."
 // 🔴 Commit 4
 
-let fibNumber = [0, 1, 1, 2, 3, 5, 8, 13, 21];
+// let fibNumber = [0, 1, 1, 2, 3, 5, 8, 13, 21];
+// app.get("/fibonacci/:number", (req, res) => {
+
+//     let x = fibNumber.forEach((num) => {
+//         if (parseInt(req.params.number) === num) {
+//             console.log("Sweet Fibonacci number");
+//             res.send("Sweet Fibonacci number!.");
+//         }
+//         // else {
+//         //     res.send("I can tell this ain't a fibonacci number. Wack.");
+//         // }
+//     });
+//     let y = fibNumber.forEach((num) => {
+//         if (parseInt(req.params.number) != num) {
+//             console.log("I can tell this ain't a fibonacci number. Wack.");
+//             res.send("I can tell this ain't a fibonacci number. Wack.");
+//         }
+//     });
+
+// });
+
+// Fibonacci Continued
+// Instead, take in a number that will refer to the index of a Fibonacci number. Print out the Fibonacci 
+//number that is located at that index.
+// Example:
+// The Fibonacci sequence:
+// 1,1,2,3,5,8,13,21,34,55,89,144, ...;
+// num = 4; Output => 5
+
+let seq = [1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144];
+
 app.get("/fibonacci/:number", (req, res) => {
 
-    let x = fibNumber.forEach((num) => {
-        if (parseInt(req.params.number) === num) {
-            console.log("Sweet Fibonacci number");
-            res.send("Sweet Fibonacci number!.");
-        }
-        // else {
-        //     res.send("I can tell this ain't a fibonacci number. Wack.");
-        // }
-    });
-    let y = fibNumber.forEach((num) => {
-        if (parseInt(req.params.number) != num) {
-            console.log("I can tell this ain't a fibonacci number. Wack.");
-            res.send("I can tell this ain't a fibonacci number. Wack.");
-        }
-    });
-
+    let index = parseInt(req.params.number);
+    for (let i = 0; i < seq.length; i++) {
+        if (index === i)
+            res.send(`${seq[index]}`);
+    }
 });
 
 app.listen(3000, () => {

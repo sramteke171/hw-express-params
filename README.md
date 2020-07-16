@@ -10,13 +10,13 @@
 * Go inside the folder you just cloned.
 * Create a file named `server.js`. 
 * Run the command **`npm init -y`** this command will create the file `package.json`.
-* Install express by running the command **`npm install express`**. (When you run this command for the first time. the folder `node_modules` gets created).
-* Open VScode.
+* Install express by running the command **`npm install express`**. (When you run the **install** command for the first time. the folder `node_modules` and the file `package-lock.json` gets created).
+* Open VScode and check:
   * Your `package.json` file should have `express` listed in the dependencies.
   * You could also check in your `node_modules` folder to see an `express` folder.
-* In your `server.js` file set up your express app.
+* In your `server.js` file set up an express app.
 
-:elephant: Need a reminder in how to set up your express app?
+:elephant:  Need a reminder in how to set up your express app?
 
 ```js
 const express = require("express");
@@ -27,7 +27,7 @@ app.listen(3000, () => {
 });
 ```
 * To validate if you express app (your server) is good to go, run the command `nodemon` in your terminal
-you should see something like this
+you should see something like this.
 ```sh
  > $: nodemon
 [nodemon] 1.18.11

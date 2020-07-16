@@ -40,6 +40,7 @@ app.get("/tip/:total/:tipPercentage", (req, res) => {
     res.send(`${tip}`)
 });
 
+
 app.listen(3000, () => {
     console.log("nodemon/server listening");
 });

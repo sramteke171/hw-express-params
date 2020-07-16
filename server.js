@@ -40,7 +40,35 @@ app.get("/tip/:total/:tipPercentage", (req, res) => {
     res.send(`${tip}`)
 });
 
+// Magic 8 Ball
+// Create a route of '/magic' that should expect a phrase in the URL that ask the Magic 8 ball a question.
+
+// So if the user hits that route and asks a question of "Will I be a Millionaire" 
+//(ex. '/magic/Will%20I%20Be%20A%20Millionaire') 
+//they should see returned to them their question AND a random Magic 8 ball response (see the array below) on the screen.
+
+// Remember that we can't use spaces in the url, so we use %20 to express a space in the url.
+
+// Use this array of Magic 8 ball responses.....
+// ["It is certain", "It is decidedly so", "Without a doubt", "Yes definitely","You may rely on it", "As I see it yes", "Most likely", "Outlook good","Yes", "Signs point to yes", "Reply hazy try again", "Ask again later","Better not tell you now", "Cannot predict now", "Concentrate and ask again","Don't count on it", "My reply is no", "My sources say no","Outlook not so good", "Very doubtful"]
+// 🔴 Commit 3
+
+let arrayBall = ["It is certain", "It is decidedly so", "Without a doubt", "Yes definitely",
+    "You may rely on it", "As I see it yes", "Most likely", "Outlook good",
+    "Yes", "Signs point to yes", "Reply hazy try again", "Ask again later",
+    "Better not tell you now", "Cannot predict now", "Concentrate and ask again",
+    "Don't count on it", "My reply is no", "My sources say no", "Outlook not so good",
+    "Very doubtful"];
+
+app.get("/magic/:question", (req, res) => {
+    console.log(req.params.question);
+    let item = arrayBall[Math.floor(Math.random() * arrayBall.length)];
+    res.send(`${req.params.question} ${item}`);
+
+    //res.send(item);
+
+})
 
 app.listen(3000, () => {
-    console.log("nodemon/server listening");
+    console.log("nodemon / server listening");
 });
